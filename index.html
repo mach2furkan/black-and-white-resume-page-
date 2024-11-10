@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Furkan Aşkın - Professional Resume">
+    <title>Furkan Aşkın | Professional Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            background-color: #222;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            font-size: 1.75rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00bcd4;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 5rem 2rem;
+            background-image: linear-gradient(to right, #222, #333);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-family: 'Lora', serif;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            color: #ddd;
+            margin-bottom: 2rem;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-family: 'Lora', serif;
+            color: #333;
+            position: relative;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            width: 50px;
+            height: 4px;
+            background-color: #00bcd4;
+            margin: 0.5rem auto 2rem;
+        }
+
+        /* Experience Section */
+        .job {
+            margin-bottom: 2.5rem;
+            padding-left: 1rem;
+            border-left: 4px solid #00bcd4;
+        }
+
+        .job h3 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .job p {
+            font-size: 1rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .job ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .job ul li {
+            font-size: 1rem;
+            color: #555;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .job ul li::before {
+            content: '•';
+            color: #00bcd4;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .skill {
+            background-color: #e0e0e0;
+            padding: 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background-color: #00bcd4;
+            color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
+        .contact .button {
+            display: inline-block;
+            background-color: #00bcd4;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact .button:hover {
+            background-color: #007a92;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #222;
+            color: #ddd;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .section {
+                padding: 3rem 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links a {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">Furkan Aşkın</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <h1>Welcome to My Professional Resume</h1>
+        <p>Innovative | determined | leader | tech-savvy | visionary </p>
+    </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="section about">
+    <h2>About Me</h2>
+    <div class="section-divider"></div>
+    <p>I am a passionate and driven Computer Engineering student at İstinye University, committed to mastering advanced technologies and applying them in impactful ways. My academic focus is on programming and machine learning, where I have developed proficiency in Python, C++, and a variety of algorithmic techniques. Alongside my studies, I am actively involved in practical projects that bridge theory with real-world applications. I am the founder of YILKI Technology, a team dedicated to pioneering innovations in drone systems for fire detection and suppression. In this role, I lead a multidisciplinary team, setting strategic goals, and overseeing product development to deliver cutting-edge solutions for environmental challenges.
+
+        My work with YILKI Technology allows me to integrate my technical knowledge with leadership, project management, and team coordination skills, ensuring we meet the highest standards of quality, safety, and operational efficiency. My responsibilities include identifying market opportunities, establishing product development goals, and fostering stakeholder relationships that drive our projects forward. I am committed to staying at the forefront of technological advancements and actively encourage research and development within our team.
+
+        Beyond YILKI, I have pursued roles that expand my practical skills in both aerospace and IT. My experience as a Staff and Aerospace Engineering Team Coordinator at NASA in Izmir allowed me to apply my engineering knowledge to aerospace projects, manage team dynamics, and innovate on complex engineering challenges. Additionally, my role in the IT department at REMAX enhanced my capabilities in system development, data management, and IT infrastructure, where I focused on implementing secure, efficient, and scalable solutions.
+
+        My background in diverse technical environments and my dedication to continuous learning equip me to adapt to and thrive in the fast-evolving field of computer engineering. With a strong foundation in programming, an expanding knowledge in machine learning, and hands-on experience in various industries, I am committed to contributing to technological advancements that drive positive change.</p>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="section experience">
+    <h2>Experience</h2>
+    <div class="section-divider"></div>
+
+    <div class="job">
+        <h3>Founder</h3>
+        <p>YILKI Technology | March 2024 - Present</p>
+        <ul>
+            <li>Established YILKI Technology, set vision, and identified market opportunities.</li>
+            <li>Led product development, managed stakeholder relationships, and ensured compliance.</li>
+            <li>Aimed to make YILKI Technology a leader in drone technology nationally and internationally.</li>
+        </ul>
+    </div>
+    <div class="job">
+        <h3>Web and Social Media Manager</h3>
+        <p>Restaurant Industry | New York | 2023-2024</p>
+        <ul>
+            <li>Managed the website, menu, and online orders.</li>
+            <li>Created and implemented social media campaigns to engage customers.</li>
+        </ul>
+    </div>
+    <div class="job">
+        <h3>Staff and Aerospace Engineering Team Coordinator</h3>
+        <p>NASA | March 2023 - June 2023</p>
+        <ul>
+            <li>Coordinated aerospace projects, managed team activities, and ensured industry standard compliance.</li>
+            <li>Oversaw development, testing, and innovation of aerospace systems.</li>
+            <li>Maintained effective team communication and managed project timelines and resources.</li>
+        </ul>
+    </div>
+
+    <div class="job">
+        <h3>IT Department</h3>
+        <p>Remax | December 2023 - April 2024</p>
+        <ul>
+            <li>Developed and maintained systems, managed data, and provided technical support.</li>
+            <li>Focused on data security, system troubleshooting, and IT infrastructure management.</li>
+            <li>Researched new technologies for continuous improvement and scalability.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="section skills">
+    <h2>Skills</h2>
+    <div class="section-divider"></div>
+    <div class="skills-grid">
+        <div class="skill">Python</div>
+        <div class="skill">C++</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Project Management</div>
+        <div class="skill">Team Leadership</div>
+        <div class="skill">Aerospace Coordination</div>
+        <div class="skill">Web Development</div>
+        <div class="skill">Data Security</div>
+        <div class="skill">Research & Development</div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <div class="section-divider"></div>
+    <p>Let's connect and discuss how we can create value together!</p>
+    <a href="mailto:furkanasknn@gmail.com" class="button">Get in Touch</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Furkan Aşkın | All Rights Reserved</p>
+    <p>Connect with me on <a href="https://www.linkedin.com/in/furkanasknn/" style="color: #00bcd4; text-decoration: none;">LinkedIn</a> | <a href="https://github.com/mach2furkan" style="color: #00bcd4; text-decoration: none;">GitHub</a></p>
+</footer>
+
+</body>
+
+</html>
